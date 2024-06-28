@@ -1,16 +1,20 @@
 body {
     font-family: system-ui, "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    width: 100%;
+    height: 100%;
   }
 
+  .sidebar > *{
+    color: white;
+  }
 
-div{
-    border: 2px solid;
-}
-
+  .header-icons{
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(35deg) brightness(102%) contrast(102%);
+  }
 .main{
     display: grid;
     grid-template-columns: 1fr 3.5fr;
-    grid-template-rows: 1fr 3.5fr;
+    grid-template-rows: 1fr 7fr;
     gap: 5px;
     margin: 5px;
 }
@@ -24,6 +28,7 @@ div{
     flex-direction: column;
     grid-row: 1;
     grid-column: 2 / span 2;
+    justify-content: space-between;
 }
 .sidebar{
     grid-row: 1 / span 2;
@@ -37,12 +42,12 @@ div{
 .main-content{
     grid-row: 2;
     grid-column: 2;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     display: grid;
     background-color: #dbeafe;
 }
-.dashboard, .main-section, .extra-section, .user-info, .projects, .right-side, .announcement, .announcement-list, .trending, .trending-list, .bar{
+.main-section, .extra-section, .projects, .right-side, .announcement, .announcement-list, .trending, .trending-list, .bar{
     display: grid;
     gap: 5px;
     margin: 5px;
@@ -52,17 +57,28 @@ div{
 display: flex;
 align-items: center;
 justify-content:baseline;
-gap: 5px;;
+gap: 5px;
 }
 
-.search-area{
-    width: 90%;
-    margin-left: 5px;
-    justify-self: end;
+.user-info{
+    display: flex;
+    justify-content: space-around;
 }
+
+
+.introduction{
+    display: flex;
+    justify-content: baseline;
+}
+
+
 .projects{
     grid-row: 1/ span 3;
     grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 10px;
 }
 .right-side{
     grid-row: 1 / span 3;
@@ -70,17 +86,42 @@ gap: 5px;;
 }
 .buttons{
     display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.new, .upload, .share{
+    width: 20%;
+    height: auto;
 }
 .search-bar{
 display: flex;
-align-items: space-evenly;
+justify-content: space-around;
+gap: 80px;
+align-items: center;
 }
-.header-icons{
+.magnify{
+    align-self: center;
+}
+
+.search-section{
+   width: 500px;
+}
+.header-right{
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+}
+.header-icons, .bell, .magnify{
 width: auto;
 height: 25px;
 }
-
-.trending-pics{
+.small-profile{
+    width: auto;
+    height: 35px;
+}
+.trending-pics, .profile-pic{
     width: auto;
     height: 50px;
     }
@@ -88,7 +129,7 @@ height: 25px;
     display: flex;
     align-items: center;
     justify-content:baseline;
-    gap: 5px;;
+
 }
 .one, .two, .three, .four, .five, .six, .announcements, .trending-list{
     background-color: white;
@@ -98,6 +139,7 @@ height: 25px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5px;
+    margin: 5px;
     align-items: stretch;
 }
 .one{

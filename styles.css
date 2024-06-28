@@ -1,3 +1,8 @@
+body {
+    font-family: system-ui, "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+
+
 div{
     border: 2px solid;
 }
@@ -19,23 +24,23 @@ div{
     flex-direction: column;
     grid-row: 1;
     grid-column: 2 / span 2;
-    background-color: rgba(74, 74, 78, 0.37);
 }
 .sidebar{
     grid-row: 1 / span 2;
     grid-column: 1;
-    background-color: rgb(47, 47, 170);
     grid-template-rows: 50px 250px 200px;
     grid-template-columns: 1fr;
     align-content: start;
     align-items: start;
+    background-color: #0ea5e9;
 }
 .main-content{
     grid-row: 2;
     grid-column: 2;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color: rgb(121, 121, 124);
+    display: grid;
+    background-color: #dbeafe;
 }
 .dashboard, .main-section, .extra-section, .user-info, .projects, .right-side, .announcement, .announcement-list, .trending, .trending-list, .bar{
     display: grid;
@@ -73,4 +78,49 @@ align-items: space-evenly;
 .header-icons{
 width: auto;
 height: 25px;
+}
+
+.trending-pics{
+    width: auto;
+    height: 50px;
+    }
+.trending-list > *{
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+    gap: 5px;;
+}
+.one, .two, .three, .four, .five, .six, .announcements, .trending-list{
+    background-color: white;
+}
+.project-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    align-items: stretch;
+}
+.one{
+    grid-row: 1;
+    grid-column: 1;
+}
+.two{
+    grid-row: 1;
+    grid-column: 2;
+}
+.three{
+    grid-row: 2;
+    grid-column: 1;
+}
+.four{
+    grid-row: 2;
+    grid-column: 2;
+}
+.five{
+    grid-row: 3;
+    grid-column: 1;
+}
+.six{
+    grid-row: 3;
+    grid-column: 2;
 }
